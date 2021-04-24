@@ -11,6 +11,7 @@ $file_tmp_name = $_FILES["photo"]["tmp_name"];
 
 
 
+
 $connection = new mysqli("localhost","root","","ajax129");
 
 $sql = "INSERT INTO students (name,email,cell,username,photo) VALUES ('$name','$email','$cell','$username','$file_name')";

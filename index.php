@@ -25,8 +25,6 @@
 	<div class="app">
 		
 	</div>
-	
-
 
 
 
@@ -73,7 +71,7 @@
 		
 	});
 
-   //back
+   //view back
 	$(document).on("click","#back",function(e){
 		e.preventDefault();
 
@@ -119,6 +117,7 @@
 			contentType:false,
 			processData:false,
 			success: function(data){
+
 				swal({
 					title:"Successfully",
 					text:"Your Data Send Send to Database",
@@ -184,6 +183,30 @@
 
 		return false;
 	});
+
+    //edit
+	$(document).on("click","#edit_id",function(e){
+		e.preventDefault();
+		let id = $(this).attr("edit_id");
+		$.ajax({
+			url:"edit.php",
+			method:"POST",
+			data:{
+				id:id
+			},
+			success:function(data){
+				$(".app").html(data);
+			}
+		});
+	});
+
+	// form edit
+
+	$(document).on("submit","#edit_form",function(e){
+		e.preventDefault();
+
+	});
+
 
 	</script>
 </body>

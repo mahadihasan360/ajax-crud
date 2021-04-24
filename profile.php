@@ -1,10 +1,10 @@
 <?php
 
-$id = $_POST["id"];
+$edit_id = $_POST["id"];
 
 $connection = new mysqli("localhost","root","","ajax129");
 
-$sql = "SELECT * FROM students WHERE id = '$id'";
+$sql = "SELECT * FROM students WHERE id = '$edit_id'";
 
 $data = $connection->query($sql);
 
